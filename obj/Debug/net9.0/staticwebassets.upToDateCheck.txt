@@ -1,0 +1,5 @@
+wwwroot\app.css
+wwwroot\devcraft-ninja-small.svg
+wwwroot\favicon.png
+C:\Users\jljim\Source\Repos\AppsAvanzadas\wwwroot\app.css
+C:\Users\jljim\Source\Repos\AppsAvanzadas\wwwroot\devcraft-ninja-small.svg
