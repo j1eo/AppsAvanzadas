@@ -4,4 +4,9 @@
 *.suo
 *.userosscache
 *.sln.docstates
+
+# Ignore build folders
+bin/
+obj/
+
 todos.md
