@@ -5,13 +5,19 @@
 @inject NavigationManager NavManager
 
 <TelerikRootComponent IconType="@IconType.Font">
-    <main>
-        @Body
-    </main>
-    <AppsAvanzadas.Components.Pages.Footer />
-    <TelerikMediaQuery Media="(min-width: 641px)" OnChange="@OnMediaQueryChange" />
+        <AppsAvanzadas.Components.Pages.MainMenu />
 
-</TelerikRootComponent>
+        <!-- Espaciador para que el contenido no quede oculto bajo el header fijo -->
+        <div class="header-spacer"></div>
+
+        <main>
+            @Body
+        </main>
+
+        <AppsAvanzadas.Components.Pages.Footer />
+
+        <TelerikMediaQuery Media="(min-width: 641px)" OnChange="@OnMediaQueryChange" />
+    </TelerikRootComponent>
 
 <div id="blazor-error-ui">
     An unhandled error has occurred.

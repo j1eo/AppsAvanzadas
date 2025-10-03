@@ -223,3 +223,74 @@ div.appbar-bottom {
         .ragasa-footer .btn-success:hover {
             filter: brightness(1.05);
         }
+
+/* Colores de referencia */
+:root {
+    --accent: #96CA4F; /* verde para el link activo */
+    --menu-border: rgba(0,0,0,.08);
+}
+
+/* Header fijo */
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid var(--menu-border);
+}
+
+/* Franja superior (logo) */
+.brand-bar {
+    background: #fff;
+}
+
+/* Franja de menú */
+.menu-bar {
+    background: #fff;
+    border-top: 1px solid var(--menu-border);
+    border-bottom: 1px solid var(--menu-border);
+}
+
+    /* Navegación */
+    .menu-bar .nav-link {
+        font-weight: 600;
+        letter-spacing: .02em;
+        color: #1f1f1f;
+    }
+
+        .menu-bar .nav-link:hover {
+            color: #111;
+            text-decoration: underline;
+        }
+
+        .menu-bar .nav-link.active,
+        .menu-bar .nav-link.active:hover {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+/* Marca (título) */
+.brand-title {
+    line-height: 1;
+}
+
+/* Altura total aproximada del header (logo + menú) para el espaciador */
+.header-spacer {
+    height: 128px;
+}
+
+/* Responsive: header más compacto en móviles */
+@media (max-width: 991.98px) {
+    .header-spacer {
+        height: 112px;
+    }
+}
+
+/* Botón de idioma */
+.menu-bar .btn-outline-secondary {
+    border-color: var(--menu-border);
+    color: #333;
+    background: #fff;
+}
+
+    .menu-bar .btn-outline-secondary:hover {
+        border-color: var(--accent);
+        color: #000;
+    }
