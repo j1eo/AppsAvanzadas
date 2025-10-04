@@ -145,3 +145,152 @@ div.appbar-bottom {
 #copyright {
     padding: .5em 0;
 }
+
+/* Footer estilo Ragasa (usa solo utilidades Bootstrap + este tema) */
+.ragasa-footer {
+    color: #e6f2ef;
+    background-color: #5c384e; /* fondo principal */
+}
+
+    .ragasa-footer .footer-bottom {
+        background-color: #977489; /* banda inferior */
+        border-top: 1px solid rgba(255,255,255,.12);
+    }
+
+    .ragasa-footer h5 {
+        letter-spacing: .02em;
+    }
+
+    .ragasa-footer p {
+        color: rgba(255,255,255,.75);
+    }
+
+    .ragasa-footer .btn-outline-light.btn-sm {
+        border-color: rgba(255,255,255,.25);
+        color: #e6f2ef;
+        background: rgba(255,255,255,.02);
+    }
+
+        .ragasa-footer .btn-outline-light.btn-sm:hover {
+            border-color: #96CA4F;
+            color: #96CA4F;
+        }
+
+    .ragasa-footer .footer-links a {
+        color: #e6f2ef;
+        text-decoration: none;
+    }
+
+        .ragasa-footer .footer-links a:hover {
+            color: #96CA4F;
+            text-decoration: underline;
+        }
+
+    .ragasa-footer .chev {
+        color: #96CA4F;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    /* Inputs */
+    .ragasa-footer .form-control,
+    .ragasa-footer .form-select,
+    .ragasa-footer textarea {
+        background-color: rgba(255,255,255,.08);
+        border-color: rgba(255,255,255,.2);
+        color: #fff;
+    }
+
+        .ragasa-footer .form-control::placeholder,
+        .ragasa-footer textarea::placeholder {
+            color: rgba(255,255,255,.65);
+        }
+
+        .ragasa-footer .form-control:focus,
+        .ragasa-footer .form-select:focus,
+        .ragasa-footer textarea:focus {
+            border-color: #96CA4F;
+            box-shadow: 0 0 0 .2rem rgba(150,202,79,.15);
+        }
+
+    .ragasa-footer .btn-success {
+        background-color: #96CA4F;
+        border-color: #96CA4F;
+        color: #033;
+        font-weight: 700;
+    }
+
+        .ragasa-footer .btn-success:hover {
+            filter: brightness(1.05);
+        }
+
+/* Colores de referencia */
+:root {
+    --accent: #96CA4F; /* verde para el link activo */
+    --menu-border: rgba(0,0,0,.08);
+}
+
+/* Header fijo */
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid var(--menu-border);
+}
+
+/* Franja superior (logo) */
+.brand-bar {
+    background: #fff;
+}
+
+/* Franja de menú */
+.menu-bar {
+    background: #fff;
+    border-top: 1px solid var(--menu-border);
+    border-bottom: 1px solid var(--menu-border);
+}
+
+    /* Navegación */
+    .menu-bar .nav-link {
+        font-weight: 600;
+        letter-spacing: .02em;
+        color: #1f1f1f;
+    }
+
+        .menu-bar .nav-link:hover {
+            color: #111;
+            text-decoration: underline;
+        }
+
+        .menu-bar .nav-link.active,
+        .menu-bar .nav-link.active:hover {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+/* Marca (título) */
+.brand-title {
+    line-height: 1;
+}
+
+/* Altura total aproximada del header (logo + menú) para el espaciador */
+.header-spacer {
+    height: 128px;
+}
+
+/* Responsive: header más compacto en móviles */
+@media (max-width: 991.98px) {
+    .header-spacer {
+        height: 112px;
+    }
+}
+
+/* Botón de idioma */
+.menu-bar .btn-outline-secondary {
+    border-color: var(--menu-border);
+    color: #333;
+    background: #fff;
+}
+
+    .menu-bar .btn-outline-secondary:hover {
+        border-color: var(--accent);
+        color: #000;
+    }
