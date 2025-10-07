@@ -242,14 +242,14 @@ div.appbar-bottom {
     background: #fff;
 }
 
-/* Franja de menú */
+/* Franja de menÃº */
 .menu-bar {
     background: #fff;
     border-top: 1px solid var(--menu-border);
     border-bottom: 1px solid var(--menu-border);
 }
 
-    /* Navegación */
+    /* NavegaciÃ³n */
     .menu-bar .nav-link {
         font-weight: 600;
         letter-spacing: .02em;
@@ -267,24 +267,24 @@ div.appbar-bottom {
             text-decoration: none;
         }
 
-/* Marca (título) */
+/* Marca (tÃ­tulo) */
 .brand-title {
     line-height: 1;
 }
 
-/* Altura total aproximada del header (logo + menú) para el espaciador */
+/* Altura total aproximada del header (logo + menÃº) para el espaciador */
 .header-spacer {
     height: 128px;
 }
 
-/* Responsive: header más compacto en móviles */
+/* Responsive: header mÃ¡s compacto en mÃ³viles */
 @media (max-width: 991.98px) {
     .header-spacer {
         height: 112px;
     }
 }
 
-/* Botón de idioma */
+/* BotÃ³n de idioma */
 .menu-bar .btn-outline-secondary {
     border-color: var(--menu-border);
     color: #333;
@@ -297,7 +297,7 @@ div.appbar-bottom {
     }
 
 /* %%%%% HOME PAGE %%%%% */
-/* Hace que la sección “sangre” a los bordes, incluso dentro de layouts con padding */
+/* Hace que la secciÃ³n Â“sangreÂ” a los bordes, incluso dentro de layouts con padding */
 .full-bleed {
     width: 100vw;
     margin-left: 50%;
@@ -312,7 +312,7 @@ div.appbar-bottom {
     display: block;
 }
 
-/* Máscara oscura ligera para mejorar contraste del título */
+/* MÃ¡scara oscura ligera para mejorar contraste del tÃ­tulo */
 .slide-mask {
     position: absolute;
     inset: 0;
@@ -320,7 +320,7 @@ div.appbar-bottom {
     pointer-events: none;
 }
 
-/* Título centrado tipo héroe */
+/* TÃ­tulo centrado tipo hÃ©roe */
 .slide-title {
     position: absolute;
     inset: 0;
@@ -337,7 +337,7 @@ div.appbar-bottom {
     padding: 0 1rem;
 }
 
-/* Opcional: botones de navegación más discretos */
+/* Opcional: botones de navegaciÃ³n mÃ¡s discretos */
 .k-carousel .k-button.k-flat {
     background: rgba(0,0,0,.35);
     color: #fff;
@@ -348,7 +348,7 @@ div.appbar-bottom {
         background: rgba(0,0,0,.5);
     }
 
-/* Quita bordes redondeados del carrusel si tu tema los añade */
+/* Quita bordes redondeados del carrusel si tu tema los aÃ±ade */
 .k-carousel {
     border-radius: 0;
 }
