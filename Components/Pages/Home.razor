@@ -1,32 +1,61 @@
 ﻿@page "/"
 
-<PageTitle>Telerik Blazor App | Home</PageTitle>
+<PageTitle>Home</PageTitle>
 
-<div id="home-page">
-    <HomeSvg />
+<!-- Hero / Full-bleed -->
+<section class="hero-carousel full-bleed">
+    <TelerikCard></TelerikCard>
+    <TelerikCarousel Data="@Slides"
+                     Width="100vw"
+                     Height="70vh"
+                     Class="k-rounded-0">
+        <Template>
+            <figure class="slide m-0 h-100 w-100 position-relative">
+                <img src="@context.Src" alt="@context.Alt" class="slide-img" />
+                <div class="slide-mask"></div>
 
-    <h1>Hello, Telerik UI for Blazor!</h1>
-
-    <p>PRIMER AVANCE DEL PROYECTO</p>
-</div>
-
-<style>
-    #home-page {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: max-content;
-        text-align: center;
-        font-size: var(--kendo-font-size-xl);
-    }
-
-    @@media (min-height: calc(56px + 50px + 400px)) {
-        /* header + footer + home page container*/
-        #home-page {
-            margin-top: calc(50vh - 28px - 25px - 200px);
-        }
-    }
-</style>
+                @* Título centrado estilo Ragasa *@
+                @if (!string.IsNullOrWhiteSpace(context.Caption))
+                {
+                    <figcaption class="slide-title">
+                        @context.Caption
+                    </figcaption>
+                }
+            </figure>
+        </Template>
+    </TelerikCarousel>
+</section>
 
 @code {
+    public IEnumerable<Slide> Slides => ImageSources
+        .Select((src, i) => new Slide
+        {
+            Id = i + 1,
+            Src = src,
+            Alt = $"Slide {i + 1}",
+            // Pon el texto que quieres mostrar sobre cada imagen
+            Caption = i switch
+            {
+                0 => "UNA DE LAS MEJORES EMPRESAS\nPARA TRABAJAR",
+                1 => "OPORTUNIDADES DE CRECIMIENTO",
+                2 => "INNOVACIÓN Y CALIDAD",
+                _ => "COMPROMISO CON LAS PERSONAS"
+            }
+        });
 
+    public string[] ImageSources = new[]
+    {
+        "https://www.ragasa.com.mx/wp-content/uploads/2016/12/ragasa_slider1.jpg",
+        "https://www.ragasa.com.mx/wp-content/uploads/2022/05/slidebolsatrabajo.jpg",
+        "https://www.ragasa.com.mx/wp-content/uploads/2016/12/ragasa_slider5.jpg",
+        "https://www.ragasa.com.mx/wp-content/uploads/2017/03/ragasa_slider6.jpg"
+    };
+
+    public class Slide
+    {
+        public int Id { get; set; }
+        public string Src { get; set; } = "";
+        public string Alt { get; set; } = "";
+        public string? Caption { get; set; }
+    }
 }

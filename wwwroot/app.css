@@ -105,6 +105,7 @@ div.appbar-top {
 /* Main Content */
 
 main {
+    margin-top: 162px;
     padding: 0 2em 2em;
 }
 
@@ -241,14 +242,14 @@ div.appbar-bottom {
     background: #fff;
 }
 
-/* Franja de men� */
+/* Franja de menú */
 .menu-bar {
     background: #fff;
     border-top: 1px solid var(--menu-border);
     border-bottom: 1px solid var(--menu-border);
 }
 
-    /* Navegaci�n */
+    /* Navegación */
     .menu-bar .nav-link {
         font-weight: 600;
         letter-spacing: .02em;
@@ -266,24 +267,24 @@ div.appbar-bottom {
             text-decoration: none;
         }
 
-/* Marca (t�tulo) */
+/* Marca (título) */
 .brand-title {
     line-height: 1;
 }
 
-/* Altura total aproximada del header (logo + men�) para el espaciador */
+/* Altura total aproximada del header (logo + menú) para el espaciador */
 .header-spacer {
     height: 128px;
 }
 
-/* Responsive: header m�s compacto en m�viles */
+/* Responsive: header más compacto en móviles */
 @media (max-width: 991.98px) {
     .header-spacer {
         height: 112px;
     }
 }
 
-/* Bot�n de idioma */
+/* Botón de idioma */
 .menu-bar .btn-outline-secondary {
     border-color: var(--menu-border);
     color: #333;
@@ -294,3 +295,60 @@ div.appbar-bottom {
         border-color: var(--accent);
         color: #000;
     }
+
+/* %%%%% HOME PAGE %%%%% */
+/* Hace que la sección sangre a los bordes, incluso dentro de layouts con padding */
+.full-bleed {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%); /* evita el padding lateral del layout */
+}
+
+/* Imagen a pantalla completa dentro del carrusel */
+.slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Máscara oscura ligera para mejorar contraste del título */
+.slide-mask {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,.45), rgba(0,0,0,.25));
+    pointer-events: none;
+}
+
+/* Título centrado tipo héroe */
+.slide-title {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    line-height: 1.25;
+    white-space: pre-line; /* respeta \n en Caption */
+    font-size: clamp(1.25rem, 3.2vw, 2.5rem); /* responsivo */
+    padding: 0 1rem;
+}
+
+/* Opcional: botones de navegación más discretos */
+.k-carousel .k-button.k-flat {
+    background: rgba(0,0,0,.35);
+    color: #fff;
+    border: 0;
+}
+
+    .k-carousel .k-button.k-flat:hover {
+        background: rgba(0,0,0,.5);
+    }
+
+/* Quita bordes redondeados del carrusel si tu tema los añade */
+.k-carousel {
+    border-radius: 0;
+}
